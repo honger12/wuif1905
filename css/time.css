@@ -1,0 +1,250 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,input,textarea,select,option{
+    margin: 0;
+    padding:0;
+    /*设置列表样式*/
+    list-style:none;
+}
+body{
+    background: #e9eaed;
+    font-family: 微软雅黑;
+}
+/*header设置*/
+.header{
+    width: 100%;
+    height: 60px;
+    background: black;
+}
+/*img{*/
+/*    width: 100%;*/
+/*    !*height: 100%;*!*/
+/*}*/
+.headerBox{
+    width: 1200px;
+    height: 100%;
+    /*background: antiquewhite;*/
+    margin: auto;
+    line-height: 60px;
+
+}
+.headerBox h1{
+    /*补充部分：width可以不写 margin-right可以添加*/
+    /*width: 160px;*/
+    height: 100%;
+    /*background: aqua;*/
+    float: left;
+    margin-right: 75px;
+    /*font-weight: normal;*/
+    font-weight: 300;
+    text-align: center;
+}
+.headerBox .search{
+    width: 32px;
+    height: 34px;
+    /*background: bisque;*/
+    float: right;
+    /*line-height: 60px;*/
+    overflow: hidden;
+    margin-right: 16px;
+    margin-top: 10px;
+}
+.search img{
+    width: 100%;
+    height: 100%;
+}
+.headerBox .nav{
+    /*padding: 20px;*/
+    /*width: 730px;*/
+    height: 100%;
+    /*background: coral;*/
+    float: left;
+    text-align: center;
+}
+.nav li{
+    /*display: inline;*/
+    color: white;
+    align:center;
+    /*padding: 5px;*/
+    /*补充部分(浮动（父类中的宽度可以不写730px、display可以不写）、右或左边框\上述内填充可以删去)*/
+    float: left;
+    margin-right: 36px;
+
+}
+.nav li a{
+    color: white;
+    text-decoration: none;
+}
+.nav a{
+    font-family: 微软雅黑;
+    font-size: 16px;
+}
+a:hover{
+    color: #00c1de;
+}
+a{
+    /*去掉下划线*/
+    text-decoration: none;
+}
+/*header结束*/
+
+
+/*body_begin*/
+.body{
+    width: 1140px;
+    height: auto;
+    padding: 30px;
+    margin: 20px auto ;
+    /*background: blue;*/
+    background: url("../../image/abbg.png") no-repeat right top white;
+}
+.body .top{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    /*background: yellow;*/
+    position: relative;
+}
+.body .top::before{
+    content: '';
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #333;
+    transition: all .15s ease-in;
+}
+.body .top:hover::before{
+    width: 80px;
+}
+.body .top p{
+    color: #484848;
+    font-size: 16px;
+    line-height: 40px;
+}
+.body .text{
+    width: 100%;
+    height: auto;
+    /*background: lemonchiffon;*/
+    transition: all .1s ease-in;
+}
+.body .text li{
+    width: 100%;
+    height: 32px;
+}
+.body .text li span{
+    color: #999;
+    line-height: 1.5;
+    padding-right: 40px;
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+.body .text li span::after{
+    content: '';
+    width: 2px;
+    height: 34px;
+    display: block;
+    background: #999999;
+    position: absolute;
+    right: 16px;
+    bottom: 0;
+}
+.body .text .i{
+    color: #333333;
+    display: inline-block;
+    position: relative;
+}
+.body .text .i::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: -24px;
+    z-index: 999;
+    background: white;
+}
+.body .text .i:hover::before{
+    background: #000;
+}
+.body .bo{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /*background: blue;*/
+}
+.bo .bo_text{
+    margin-left: 450px;
+    transition:all .15s ease-in;
+}
+.bo_text li{
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    margin: 0 5px 10px 5px;
+    background: #e9eaed;
+    font-size: 16px;
+    color: #000;
+    display: inline-block;
+}
+.bo_text li:hover{
+    background: #000;
+    color: white;
+}
+
+
+/*headerBottom_begin*/
+.headerBottom{
+    width: 100%;
+    height: 190px;
+    background: black;
+    margin-top: 30px;
+}
+.headerBottom .bottomTop{
+    width: 100%;
+    height: 10px;
+    background: #00c1de;
+}
+.headerBottom .bottomList{
+    width: 100%;
+    height: 100px;
+    /*padding-top: 40px;*/
+    margin-top: 40px;
+    padding-bottom: 50px;
+    /*background: gray;*/
+}
+.bottomList .bottom_ph1{
+    width: 100px;
+    height: 100px;
+    margin-left: 180px;
+    /*background: blanchedalmond;*/
+    float: left;
+}
+.bottom_ph1 img , .bottom_ph2 img{
+    width: 100%;
+    height: 100%;
+}
+.bottomList .bottom_ph2{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    /*background: blanchedalmond;*/
+    float: left;
+}
+.bottomList .bottom_text{
+    width: 760px;
+    height: 100px;
+    /*background: fuchsia;*/
+    float: left;
+    margin-left: 20px;
+}
+.bottom_text p{
+    line-height: 1.5;
+    color: #695849;
+}
+

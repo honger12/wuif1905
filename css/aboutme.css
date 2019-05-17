@@ -1,0 +1,240 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,input,textarea,select,option{
+    margin: 0;
+    padding:0;
+    /*设置列表样式*/
+    list-style:none;
+}
+body{
+    background: #e9eaed;
+    font-family: 微软雅黑;
+}
+/*header设置*/
+.header{
+    width: 100%;
+    height: 60px;
+    background: black;
+}
+/*img{*/
+/*    width: 100%;*/
+/*    !*height: 100%;*!*/
+/*}*/
+.headerBox{
+    width: 1200px;
+    height: 100%;
+    /*background: antiquewhite;*/
+    margin: auto;
+    line-height: 60px;
+
+}
+.headerBox h1{
+    /*补充部分：width可以不写 margin-right可以添加*/
+    /*width: 160px;*/
+    height: 100%;
+    /*background: aqua;*/
+    float: left;
+    margin-right: 75px;
+    /*font-weight: normal;*/
+    font-weight: 300;
+    text-align: center;
+}
+.headerBox .search{
+    width: 32px;
+    height: 34px;
+    /*background: bisque;*/
+    float: right;
+    /*line-height: 60px;*/
+    overflow: hidden;
+    margin-right: 16px;
+    margin-top: 10px;
+}
+.search img{
+    width: 100%;
+    height: 100%;
+}
+.headerBox .nav{
+    /*padding: 20px;*/
+    /*width: 730px;*/
+    height: 100%;
+    /*background: coral;*/
+    float: left;
+    text-align: center;
+}
+.nav li{
+    /*display: inline;*/
+    color: white;
+    align:center;
+    /*padding: 5px;*/
+    /*补充部分(浮动（父类中的宽度可以不写730px、display可以不写）、右或左边框\上述内填充可以删去)*/
+    float: left;
+    margin-right: 36px;
+
+}
+.nav li a{
+    color: white;
+    text-decoration: none;
+}
+.nav a{
+    font-family: 微软雅黑;
+    font-size: 16px;
+}
+a:hover{
+    color: #00c1de;
+}
+a{
+    /*去掉下划线*/
+    text-decoration: none;
+}
+/*header结束*/
+
+
+/*content_begin*/
+.content{
+    width: 1120px;
+    height: 321px;
+    padding: 20px;
+    /*margin-bottom: 20px;*/
+    background: white;
+    margin: 20px auto;
+    background: url("../../image/abbg.png") no-repeat right top white;
+}
+.content .top{
+    width: 1120px;
+    height: 104px;
+    /*height: auto;*/
+    margin: 20px 0;
+    /*background: yellow;*/
+    /*position: relative;*/
+}
+.top .i{
+    width: 100px;
+    height: 100px;
+    border-radius:50% ;
+    border: 2px solid deepskyblue;
+    position: relative;
+    float: left;
+}
+.top .i .a{
+    width: 100%;
+    height: 100%;
+    border-radius:50% ;
+    overflow: hidden;
+}
+.top .i .b{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+.top .text{
+    margin-left: 10px;
+    float: left;
+}
+.top .text p , .top .text h3{
+    display: block;
+    /*float: left;*/
+    /*overflow: hidden;*/
+}
+.top .text h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.top .text p{
+    display: block;
+    /*width: 100%;*/
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.content .mid{
+    width: 120px;
+    height: 26px;
+    padding: 0 0 5px 10px;
+    border-bottom: 1px dashed black;
+    margin: 20px 0;
+    /*background: palevioletred;*/
+    position: relative;
+}
+.content .mid h2{
+    display:inline-block;
+    font-size: 18px;
+    /*margin: 20px 0;*/
+    line-height: 26px;
+}
+.content .mid .pic{
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.content .mid .pic img{
+    width: 100%;
+    height: 100%;
+}
+.content .bottom{
+    width: 1120px;
+    height: auto;
+    margin-bottom: 15px;
+    /*background: rosybrown;*/
+}
+.content .bottom p{
+    color: #666;
+    line-height: 1.5;
+
+}
+
+
+/*headerBottom_begin*/
+.headerBottom{
+    width: 100%;
+    height: 190px;
+    background: black;
+    margin-top: 30px;
+}
+.headerBottom .bottomTop{
+    width: 100%;
+    height: 10px;
+    background: #00c1de;
+}
+.headerBottom .bottomList{
+    width: 100%;
+    height: 100px;
+    /*padding-top: 40px;*/
+    margin-top: 40px;
+    padding-bottom: 50px;
+    /*background: gray;*/
+}
+.bottomList .bottom_ph1{
+    width: 100px;
+    height: 100px;
+    margin-left: 180px;
+    /*background: blanchedalmond;*/
+    float: left;
+}
+.bottom_ph1 img , .bottom_ph2 img{
+    width: 100%;
+    height: 100%;
+}
+.bottomList .bottom_ph2{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    /*background: blanchedalmond;*/
+    float: left;
+}
+.bottomList .bottom_text{
+    width: 760px;
+    height: 100px;
+    /*background: fuchsia;*/
+    float: left;
+    margin-left: 20px;
+}
+.bottom_text p{
+    line-height: 1.5;
+    color: #695849;
+}
