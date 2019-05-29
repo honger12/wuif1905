@@ -27,7 +27,7 @@ body{
     line-height: 60px;
 
 }
-.headerBox h1{
+.headerBox > h1 > a{
     /*补充部分：width可以不写 margin-right可以添加*/
     /*width: 160px;*/
     height: 100%;
@@ -37,6 +37,8 @@ body{
     /*font-weight: normal;*/
     font-weight: 300;
     text-align: center;
+    color: #ffffff;
+    text-decoration: none;
 }
 .headerBox .search{
     width: 32px;
