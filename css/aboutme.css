@@ -34,7 +34,8 @@ body{
     float: left;
     margin-right: 75px;
     /*font-weight: normal;*/
-    font-weight: 300;
+    font-weight: 600;
+    font-size: 25px;
     text-align: center;
     color: #ffffff;
     text-decoration: none;

@@ -158,11 +158,18 @@ window.onload = function () {
     }
 
 //轮播图（左右按钮--点击时图片变动）ok
-    let index = 0 ;
+//    index 保存窗口中显示是图片的下标
+//    current当前图片
+//    next下一张图片
+//     let index = 0 ;
+    let current=0,next=0;
     let rightBtn = document.querySelector('.rightBtn');
     let leftBtn = document.querySelector('.leftBtn');
     let bannerImg = document.querySelectorAll('.bannerImg > li');
+    let w = bannerImg[0].offsetWidth;
+    let flag = true;
     // console.log(bannerImg);
+    /*rightBtn lrftBtn 的点击事件（初级版本—没有什么动画）ok
     rightBtn.onclick = function () {
         index++;
         if(index == bannerImg.length){
@@ -193,7 +200,69 @@ window.onload = function () {
         })
         bannerPointer[index].classList.add('hot');
     }
+*/
 
+    rightBtn.onclick = function(){
+        if(!flag){
+            return;
+        }
+        flag=false;
+        next++;
+
+        if(next==bannerImg.length){
+            next=0;
+        }
+        bannerImg[next].style.left =w +'px';
+        animate(bannerImg[current],{left:-w});
+        animate(bannerImg[next],{left:0},function () {
+            flag=true;
+        });
+        bannerPointer[current].classList.remove('hot');
+        bannerPointer[next].classList.add('hot');
+        current = next;
+    }
+    leftBtn.onclick = function(){
+        if(!flag){
+            return;
+        }
+        flag=false;
+        next--;
+
+        if(next<0){
+            next=bannerImg.length-1;
+        }
+        bannerImg[next].style.left =-w +'px';
+        animate(bannerImg[current],{left:w});
+        animate(bannerImg[next],{left:0},function () {
+            flag=true;
+        });
+        bannerPointer[current].classList.remove('hot');
+        bannerPointer[next].classList.add('hot');
+        current = next;
+    }
+
+    // 动画效果版本animate.js
+/*
+
+   // 动画效果版本animate.js
+    rightBtn.onclick = function () {
+        index++;
+        if(index == bannerImg.length){
+            index=0;
+        }
+        bannerImg.forEach(function (ele) {
+            ele.style.zIndex = 1;
+            animate(ele,{opacity:0});
+        })
+        bannerImg[index].style.zIndex = 999;
+
+        Array.from(bannerPointer,function (elem) {
+            elem.classList.remove('hot');
+        })
+        bannerPointer[index].classList.add('hot');
+        animate(ele,{opacity:1});
+    }
+*/
 
 
    /* //轮播点以下自由练习不ok
@@ -257,11 +326,13 @@ window.onload = function () {
      }*/
 
 
-    //自动轮播使用setInterval（）方法
-   /* let btnList = document.getElementsByClassName('btnList');
-    let bannerPointer = btnList[0].getElementsByTagName('li');*/
     let first = document.querySelector('.first');
     let t = setInterval(rightBtn.onclick,1000);
+  /*  //自动轮播使用setInterval（）方法ok*/
+    // let btnList = document.getElementsByClassName('btnList');
+    // let bannerPointer = btnList[0].getElementsByTagName('li');*!/
+    // let first = document.querySelector('.first');
+    // let t = setInterval(rightBtn.onclick,1000);
     first.onmouseenter = function () {
         clearInterval(t);
     }
@@ -269,7 +340,7 @@ window.onload = function () {
         t = setInterval(rightBtn.onclick,1000);
     }
 
-    for (var i = 0 ; i < bannerPointer.length ; i++){
+  /*  for (var i = 0 ; i < bannerPointer.length ; i++){
         bannerPointer[i].aaa = i;
         console.log(i);
         bannerPointer[i].onclick = function () {
@@ -285,7 +356,31 @@ window.onload = function () {
             // this.style.background = 'blue';
             bannerImg[this.aaa].style.zIndex = 999;
         }
-    } 
+    } */
 
+
+  for(let i = 0 ; i < bannerPointer.length;i++){
+      bannerPointer[i].onclick = function () {
+          if(current ===i){
+              return;
+          }
+          next=i;
+
+          if(next>current){
+              bannerImg[next].style.left =w +'px';
+              animate(bannerImg[current],{left:-w});
+              animate(bannerImg[next],{left:0});
+          }else{
+              bannerImg[next].style.left =-w +'px';
+              animate(bannerImg[current],{left:w});
+              animate(bannerImg[next],{left:0});
+          }
+          bannerPointer[current].classList.remove('hot');
+          bannerPointer[next].classList.add('hot');
+
+
+          current = next;
+      }
+  }
 
 }

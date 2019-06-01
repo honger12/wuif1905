@@ -34,7 +34,8 @@ body{
     float: left;
     margin-right: 75px;
     /*font-weight: normal;*/
-    font-weight: 300;
+    font-weight: 600;
+    font-size: 25px;
     text-align: center;
     color: #ffffff;
     text-decoration: none;
@@ -105,6 +106,7 @@ a{
     float: left;
     position: relative;
     border-radius: 5px;
+    overflow: hidden;
 }
 .first .bannerImg{
     width: 100%;
@@ -128,8 +130,11 @@ a{
 }*/
 .bannerImg li{
     position: absolute;
-    left: 0;
+    left: 620px;
     top: 0;
+}
+.bannerImg > li:first-child{
+    left: 0;
 }
 .leftBtn , .rightBtn{
     width: 40px;
@@ -178,6 +183,8 @@ a{
     margin-right: 14px;
     float: left;
     border-radius: 50%;
+    -webkit-transition: .5s ;
+    transition: .5s;
 }
 .btnList > .hot{
     background: blue;
@@ -404,7 +411,7 @@ li{
     margin-right: 24px;
     position: relative;
 }
-.diaryList li::before{
+/*.diaryList li::before{
     content: '';
     width: 100%;
     height: 1px;
@@ -412,7 +419,7 @@ li{
     position: absolute;
     bottom: -12px;
     left: 0;
-}
+}*/
 /*推荐改名为.slide(进行复用 所有的侧边栏) height不设置*/
 .slide{
     /*284 100%*/
