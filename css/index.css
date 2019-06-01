@@ -94,6 +94,7 @@ a{
     width: 1200px;
     height: 280px;
     margin: 20px auto;
+
     background: #e9eaed;
     border-radius: 5px;
 }
@@ -107,22 +108,29 @@ a{
 }
 .first .bannerImg{
     width: 100%;
-    height: 280px;
+    /*height: 280px;*/
+    height: 100%;
     border-radius: 5px;
+    /*position: relative;*/
 }
 .bannerImg img{
+    width: 620px;
+    height: 280px;
+    /*position: absolute;
+    left: 0;
+    top: 0;*/
+    border-radius: 5px;
+}
+/*.bannerImg li{
     width: 100%;
     height: 100%;
+    display: block;
+}*/
+.bannerImg li{
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 5px;
 }
-/*.bannerImg li a{*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    display: block;*/
-/*}*/
 .leftBtn , .rightBtn{
     width: 40px;
     height: 32px;
@@ -136,22 +144,22 @@ a{
     left: 30px;
     /*overflow: hidden;*/
 }
-.leftBtn img{
+/*.leftBtn img{
     width: 100%;
     height: 100%;
     transition: transform .5s linear;
-}
+}*/
 .rightBtn{
     right: 30px;
 }
-.rightBtn img{
+/*.rightBtn img{
     width: 100%;
     height: 100%;
     transition: transform .5s linear;
-}
-.leftBtn:hover img , .rightBtn:hover img{
+}*/
+/*.leftBtn:hover img , .rightBtn:hover img{
     transform: scale(1.5 ,1.5);
-}
+}*/
 .btnList{
     width: 96px;
     height: 10px;
@@ -170,6 +178,9 @@ a{
     margin-right: 14px;
     float: left;
     border-radius: 50%;
+}
+.btnList > .hot{
+    background: blue;
 }
 .banner .second{
     margin-left: 12px;
@@ -391,6 +402,16 @@ li{
 .diaryList li{
     float: left;
     margin-right: 24px;
+    position: relative;
+}
+.diaryList li::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
 }
 /*推荐改名为.slide(进行复用 所有的侧边栏) height不设置*/
 .slide{
