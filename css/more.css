@@ -92,6 +92,7 @@ a{
 
 .content{
     width: 1200px;
+    height: auto;
     margin: 20px auto;
     background: #e9eaed;
     padding: 0 28px;
@@ -105,7 +106,7 @@ a{
     border-radius: 5px;
     float: left;
     /*overflow: hidden;*/
-    margin-bottom: 20px;
+    margin-bottom: 140px;
 }
 .header1{
     height: 60px;
@@ -446,6 +447,13 @@ a{
     padding: 0 28px;
     border-radius: 5px;
     float: right;
+}
+/*.content .content_r5{*/
+/*    margin-bottom: 30px;*/
+/*}*/
+.content .aaaaaa{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .content .right_two , .content .right_four, .content .right_five{
     width:100% ;
