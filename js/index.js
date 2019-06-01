@@ -383,4 +383,29 @@ window.onload = function () {
       }
   }
 
+
+
+    let viewH = window.innerHeight;
+    let imgs = document.querySelectorAll('.lazyLoad');
+    let positionArr = [];
+    imgs.forEach(function (ele) {
+        // let parent = ele.offsetParent;
+        // positionArr.push(parent.offsetTop + ele.offsetParent)
+        positionArr.push(ele.offsetTop);
+
+    })
+
+    window.onscroll = function () {
+        let scrolltop = document.documentElement.scrollTop;
+        for (let i = 0 ; i<positionArr.length;i++){
+            if (scrolltop + viewH >=positionArr[i] + 50) {
+
+                if (!imgs[i].src) {
+                    console.log(i);
+                    imgs[i].src = imgs[i].getAttribute('aa');
+                }
+
+            }
+        }
+    }
 }
