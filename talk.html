@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>留言功能</title>
     <link rel="stylesheet" href="./css/talk.css">
+    <script src="./js/message.js"></script>
 </head>
 <body>
 <div class="header">
@@ -33,23 +34,24 @@
             选择头像:&nbsp;&nbsp;*
             <div class="photo">
                 <ul>
-                    <li><img src="./image/tx1.jpg" alt=""></li>
-                    <li><img src="./image/tx2.jpg" alt=""></li>
-                    <li><img src="./image/tx3.jpg" alt=""></li>
-                    <li><img src="./image/tx4.jpg" alt=""></li>
-                    <li><img src="./image/tx5.jpg" alt=""></li>
-                    <li><img src="./image/tx6.jpg" alt=""></li>
-                    <li><img src="./image/tx7.jpg" alt=""></li>
-                    <li><img src="./image/tx8.jpg" alt=""></li>
+                    <li><img src="./image/tx1.jpg" alt="" id="1" opacity="0.7"></li>
+                    <li><img src="./image/tx2.jpg" alt="" id="2"></li>
+                    <li><img src="./image/tx3.jpg" alt="" id="3"></li>
+                    <li><img src="./image/tx4.jpg" alt="" id="4"></li>
+                    <li><img src="./image/tx5.jpg" alt="" id="5"></li>
+                    <li><img src="./image/tx6.jpg" alt="" id="6"></li>
+                    <li><img src="./image/tx7.jpg" alt="" id="7"></li>
+                    <li><img src="./image/tx8.jpg" alt="" id="8"></li>
                 </ul>
             </div>
-            留言内容：<br>
-            <textarea name="textarea" cols="60" rows="12" class="textarea">
+            <span>留言内容：</span>
+            <span id="liu">0</span>
+            <textarea name="textarea" cols="60" rows="12" class="textarea" maxlength="100">
             </textarea>
             <div class="sub"><input type="submit" name="bottom" class="input_bottom"></div>
         </form>
     </div>
-    <div class="relax">
+    <div class="relax" id="message">
         <div class="photo">
             <img src="./image/tx5.jpg" alt="">
         </div>

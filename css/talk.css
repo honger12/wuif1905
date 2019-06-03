@@ -151,6 +151,8 @@ a{
     width: 100%;
     height: 172px;
     margin-bottom: 10px;
+    /*不让多行文本框移动大小---大小固定*/
+    resize: none;
 }
 .speak .sub{
     width: 100%;

@@ -390,7 +390,7 @@ window.onload = function () {
     let positionArr = [];
     imgs.forEach(function (ele) {
         // let parent = ele.offsetParent;
-        // positionArr.push(parent.offsetTop + ele.offsetParent)
+        // positionArr.push(parent.offsetTop + ele.offsetTop)
         positionArr.push(ele.offsetTop);
 
     })
