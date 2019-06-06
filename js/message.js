@@ -35,6 +35,8 @@ window.addEventListener('load' , function () {
 //    提交按钮
     let submit = document.querySelector('input[type=submit]');
     let message = document.querySelector('#message');
+    let sub = document.querySelector('.sub');
+    console.log(sub);
     submit.onclick = function (e) {
         e.preventDefault();
         let imgs = thumb[prevThumb].src;
@@ -47,11 +49,12 @@ window.addEventListener('load' , function () {
             <p>${value2}</p>
             <p>${value}</p>
         </div>
-        <p>${new Date()}</p>
+        <p>${new Date().toISOString().substr(0,10)}</p>
         <br>
-    </div>     
+    </div>  
    `
         // html.classList.add('relax');
-        message.innerHTML = html + message.innerHTML;
+        // message.innerHTML = html + message.innerHTML;
+        sub.innerHTML = sub.innerHTML + html;
     }
 })

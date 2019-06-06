@@ -1,0 +1,91 @@
+header{
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    font-size: 20px;
+}
+header > form >  input{
+    height: 30px;
+
+}
+
+
+.main{
+    width: 900px;
+    height: auto;
+    margin: 20px auto;
+    border: 1px solid rgba(0,0,0,0.4);
+    /*transition: all ease-in .5s;*/
+}
+.main > .tab{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    position: relative;
+    /*transition: all ease-in .5s;*/
+}
+.tab > li{
+    /*主轴上平均分配*/
+    flex-grow: 1;
+    text-align: center;
+    line-height: 40px;
+    height: 100%;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+.tab > .hot{
+    /*background: blue;*/
+    color: #fff;
+}
+.main > .content{
+    height: auto;
+    width: 100%;
+    background: #f6f6f6;
+    line-height: 3;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    padding: 10px auto;
+
+}
+/*.content > .first , .content > .second , .content > .third{
+    flex-grow: 1;
+    height: auto;
+    width: 300px;
+    text-align: center;
+}*/
+.content > li{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    text-align: left;
+    padding-left:20px ;
+    padding-right: 20px;
+}
+.content > li > p{
+    display: inline-block;
+}
+.content > li > time{
+    float: right;
+}
+.tab > .top{
+    width: 296px;
+    height: 100%;
+    background: plum;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all ease-in .5s;
+}
+li.hot:nth-child(1) ~ .top{
+    transform: translate(0,0);
+}
+li.hot:nth-child(2) ~ .top{
+    transform: translate(100%,0);
+}
+li.hot:nth-child(3) ~ .top{
+    transform: translate(200%,0);
+}
+del{
+    float: right;
+    margin-left: 20px;
+    /*除去默认样式*/
+    text-decoration: none;
+}
